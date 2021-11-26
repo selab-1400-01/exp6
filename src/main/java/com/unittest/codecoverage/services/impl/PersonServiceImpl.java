@@ -11,15 +11,11 @@ import com.unittest.codecoverage.services.PersonService;
 
 @Service
 public class PersonServiceImpl implements PersonService {
-	
+
+	@Autowired
 	private PersonValidator validator;
 	@Autowired
 	private PersonRepository repository;
-	
-	@Autowired
-	public PersonServiceImpl() {
-		this.validator = new PersonValidator();
-	}
 
 	@Override
 	public Person insert(Person person) {
